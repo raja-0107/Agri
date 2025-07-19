@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Development System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-green-600 text-white text-center py-10 shadow-lg">
+        <h1 class="text-4xl font-bold animate-pulse">AGRI DEVELOPMENT SYSTEM</h1>
+    </header>
+
+    <nav class="bg-gray-800 flex justify-center space-x-4 py-3 text-white sticky top-0 z-50">
+        <a href="video.html" class="hover:bg-green-500 px-4 py-2 rounded transition">VIDEOS</a>
+        <a href="books.html" class="hover:bg-green-500 px-4 py-2 rounded transition">BOOKS</a>
+        <a href="buy.html" class="hover:bg-green-500 px-4 py-2 rounded transition">BUYING</a>
+        <a href="disease.html" class="hover:bg-green-500 px-4 py-2 rounded transition">DISEASE</a>
+        <a href="destruction.html" class="hover:bg-green-500 px-4 py-2 rounded transition">DESTRUCTION</a>
+    </nav>
+
+    <section class="fade-in py-10 px-5 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-green-700 mb-4">AGRICULTURE:</h2>
+            <p class="text-gray-700">Agricultural development systems refer to the processes, strategies, and methods employed to improve the efficiency, productivity, and sustainability of agriculture...</p>
+            <div class="mt-6 flex justify-center">
+                <img src="1.jpg" alt="Agriculture" class="rounded-lg w-full max-w-2xl object-cover shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="fade-in py-10 px-5 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col lg:flex-row items-center gap-6">
+            <img src="2.jfif" alt="Videos" class="w-64 h-48 object-cover rounded-lg shadow-md">
+            <div>
+                <h2 class="text-2xl font-bold text-green-700 mb-2">VIDEOS:</h2>
+                <p class="text-purple-700">We Watch The Video How To FARM In The Land....</p>
+                <h3 class="text-lg text-gray-700 mt-2">USES:</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Educational for New Farmers</li>
+                    <li>Learning New Techniques</li>
+                    <li>Skill Development</li>
+                    <li>Inspiration and Motivation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section id="books" class="fade-in py-10 px-5 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col lg:flex-row items-center gap-6">
+            <img src="4.jfif" alt="Books" class="w-52 h-52 object-cover rounded-lg shadow-md">
+            <div>
+                <h2 class="text-2xl font-bold text-green-700 mb-2">BOOKS:</h2>
+                <p class="text-purple-700">We Can Read The Notes For Farming As FREE....</p>
+                <h3 class="text-lg text-gray-700 mt-2">USES:</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Learning Best Practices</li>
+                    <li>Staying Updated</li>
+                    <li>Improving Decision-Making</li>
+                    <li>Preparing for Market Success</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="buying" class="fade-in py-10 px-5 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col lg:flex-row items-center gap-6">
+            <img src="3.png" alt="Buying" class="w-52 h-52 object-cover rounded-lg shadow-md">
+            <div>
+                <h2 class="text-2xl font-bold text-green-700 mb-2">BUYING:</h2>
+                <p class="text-purple-700">We Purchase Of Agricultural INPUTS For Farming The Land....</p>
+                <h3 class="text-lg text-gray-700 mt-2">USES:</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Improving Farm Safety</li>
+                    <li>Improving Crop Yield</li>
+                    <li>Managing Risks</li>
+                    <li>Increasing Profitability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="disease" class="fade-in py-10 px-5 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col lg:flex-row items-center gap-6">
+            <img src="5.jfif" alt="Disease" class="w-52 h-52 object-cover rounded-lg shadow-md">
+            <div>
+                <h2 class="text-2xl font-bold text-green-700 mb-2">DISEASE:</h2>
+                <p class="text-purple-700">What Are The Diseases That Occur in FARMING....</p>
+                <h3 class="text-lg text-gray-700 mt-2">USES:</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Early Detection and Prevention</li>
+                    <li>Effective Treatment and Control</li>
+                    <li>Minimizing Losses</li>
+                    <li>Improved Farm Productivity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="destruction" class="fade-in py-10 px-5 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col lg:flex-row items-center gap-6">
+            <img src="ld.jpg" alt="Destruction" class="w-52 h-52 object-cover rounded-lg shadow-md">
+            <div>
+                <h2 class="text-2xl font-bold text-green-700 mb-2">DESTRUCTION:</h2>
+                <p class="text-purple-700">Land destruction refers to the degradation or alteration of land...</p>
+                <h3 class="text-lg text-gray-700 mt-2">NEYVELI NLC:</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Improving Farm Safety</li>
+                    <li>Improving Crop Yield</li>
+                    <li>Managing Risks</li>
+                    <li>Increasing Profitability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
