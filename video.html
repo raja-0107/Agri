@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Agricultural Videos</title>
+  <style>
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 2em 0;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    header h1 {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #575757;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 1.6em;
+      color: #333;
+      margin-top: 40px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    video:hover {
+      transform: scale(1.02);
+    }
+
+    /* Scroll-to-top Button */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #topBtn:hover {
+      background-color: #333;
+    }
+
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>AGRICULTURE BASED VIDEOS</h1>
+    <p>Farming Is the Backbone of India</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="Home.html">HOME</a>
+    <a href="books.html">BOOKS</a>
+    <a href="buy.html">BUYING</a>
+    <a href="disease.html">DISEASE</a>
+    <a href="destruction.html">DESTRUCTION</a>
+  </nav>
+
+  <!-- Main Section -->
+  <section id="news" class="news">
+    <div class="container">
+      <center>
+        <div class="fade-in">
+          <h1>1. What is Agriculture?</h1>
+          <video controls preload="none">
+            <source src="wa.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>2. What are the Uses of Agriculture?</h1>
+          <video controls preload="none">
+            <source src="us.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>3. Methods of Crop Production</h1>
+          <video controls preload="none">
+            <source src="mcp.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>4. Cultivation of Crops</h1>
+          <video controls preload="none">
+            <source src="cc.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>5. Livestock Farming</h1>
+          <video controls preload="none">
+            <source src="lf.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>6. Agriculture Machines</h1>
+          <video controls preload="none">
+            <source src="am.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>7. Organic Farming</h1>
+          <video controls preload="none">
+            <source src="of.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>8. Hydroponics</h1>
+          <video controls preload="none">
+            <source src="h.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>9. Irrigation System</h1>
+          <video controls preload="none">
+            <source src="is.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>10. Pest and Disease Management</h1>
+          <video controls preload="none">
+            <source src="pd.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>11. Soil Health and Fertility</h1>
+          <video controls preload="none">
+            <source src="sh.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fade-in">
+          <h1>12. Agriculture Marketing</h1>
+          <video controls preload="none">
+            <source src="am2.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </center>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+  <!-- JS for Effects -->
+  <script>
+    // Scroll-to-top button
+    let topBtn = document.getElementById("topBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+
+      // Fade-in effect on scroll
+      document.querySelectorAll('.fade-in').forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    };
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    // Trigger fade-in for elements already in view
+    window.addEventListener('DOMContentLoaded', () => {
+      window.onscroll();
+    });
+  </script>
+</body>
+</html>
