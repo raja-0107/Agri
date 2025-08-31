@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Land Destruction</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 2em 0;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    header h1 {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .section-title {
+      text-align: center;
+      padding: 20px 10px;
+      color: #333;
+    }
+
+    .books {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container1 {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      padding: 20px;
+      align-items: center;
+    }
+
+    .container1 img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .container1 h4, .container1 p {
+      margin: 5px 0;
+      text-align: left;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 55%;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(15, 114, 37, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <!-- Header -->
+  <header>
+    <h1>LAND DESTRUCTION</h1>
+    <p>Farming Is The Backbone Of India</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="Home.html">HOME</a>
+    <a href="video.html">VIDEOS</a>
+    <a href="buy.html">BUYING</a>
+    <a href="books.html">BOOKS</a>
+    <a href="disease.html">DISEASE</a>
+  </nav>
+
+  <!-- NLC Info -->
+  <section class="books">
+    <h2 class="section-title" style="color: blue;">NEYVELI NLC...</h2>
+    <img src="nlc1.webp" alt="NLC Image" >
+    <h3>
+      Neyveli Lignite Corporation (NLC) India Limited is a public sector undertaking (PSU)
+      under the ownership of the Ministry of Coal, Government of India. It is primarily involved
+      in the mining of lignite (a type of coal) and the generation of electricity.
+    </h3>
+  </section>
+
+  <!-- Jambulingam Mudaliar -->
+  <section class="books">
+    <h2 class="section-title" style="color: red;">T.M. Jambulingam Mudaliar</h2>
+    <div class="container1">
+      <img src="jm.jpg" alt="Jambulingam Mudaliar" width="380px" height="323px"/>
+      <div>
+        <p><strong>Chance Discovery:</strong> In 1934, while digging an artesian well on his 620-acre farm, T.M. Jambulingam Mudaliar noticed a "brown substance" gushing out with the water.</p>
+        <br>
+        <h4>Initial Identification: He contacted the then British Raj, which sent geologists to Neyveli.</h4>
+        <br>
+        <h4>Lignite Identified: The "brown substance" was later identified as lignite.</h4>
+        <br>
+        <h4>Land Donation: Jambulingam Mudaliar generously extended a substantial portion of his land for soil exploration and donated his 620 acres to the Madras Government.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lignite Coal -->
+  <section class="books">
+    <h2 class="section-title" style="color: red;">LIGNITE COAL :</h2>
+    <div class="container1">
+      <img src="coal.jpeg" alt="Lignite Coal"  />
+      <div>
+        <h4>Lignite coal, also known as brown coal, is a soft, brownish-black sedimentary rock formed from naturally compressed peat. It is the lowest rank of coal due to its relatively low heat content and high moisture.</h4>
+        <br>
+        <p>1. Low carbon content (25–35%)</p>
+        <p>2. High moisture (up to 60%)</p>
+        <p>3. Crumbles easily</p>
+        <p>4. Burns with a smoky flame</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Slider
+  <section class="books">
+    <h2 class="section-title" style="color: red;">NEYVELI NLC IMAGES :</h2>
+    <div class="slider">
+      <button class="nav-button prev" onclick="changeSlide(-1)">&#10094;</button>
+      <div class="slides" id="slideContainer">
+        <img src="06.webp" alt="Slide 8" />
+        <img src="00.jfif" alt="Slide 2" />
+        <img src="01.jfif" alt="Slide 3" />
+        <img src="02.avif" alt="Slide 4" />
+        <img src="03.jfif" alt="Slide 5" />
+        <img src="04.jfif" alt="Slide 6" />
+        <img src="05.jfif" alt="Slide 7" />
+        <img src="000.jfif" alt="Slide 1" />
+        <img src="07.webp" alt="Slide 9" />
+        <img src="08.jfif" alt="Slide 10" />
+        <img src="09.jpg" alt="Slide 10" />
+        <img src="100.webp" alt="Slide 11" />
+      </div>
+      <button class="nav-button next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+  </section>
+  -->
+
+  
+
+  <!-- NLC MACHINE -->
+  <section class="books">
+    <h2 class="section-title" style="color: red;">BUCKET WHEEL EXACAVATOR :</h2>
+    <div class="container1">
+      <img src="nlc machine.jpg" alt="NLC MACHINE" style="width:518px;height:451px; padding: 25px;" />
+      <div>
+        <h4>​Neyveli Lignite Corporation India Ltd. (NLCIL) operates a fleet of advanced bucket wheel excavators (BWEs) at its Mines-II site in Neyveli, Tamil Nadu, to efficiently remove overburden and access lignite deposits.</h4>
+        <br><br>
+        <p>Capacity: The BWEs are equipped with 1,400-liter buckets, capable of moving up to 6,800 cubic meters of material per hour. </p>
+        <br>
+        <p>Size and Weight: Each crawler-mounted machine weighs approximately 2,600 tons and stands 37 meters tall.</p>
+        <br>
+        <p>Technology and Design: These excavators feature a 34-meter-long bucket wheel and discharge boom, powered by dual 750 kW motors. The superstructure can rotate 180° in either direction, and the maximum digging height is 30 meters. </p>
+        <br>
+        <p>Manufacturers: The machines were supplied by TAKRAF India Ltd., in collaboration with TAKRAF GmbH, Germany.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- THERMAL POWER STATION-->
+  <section class="books">
+    <h2 class="section-title" style="color: red;">THERMAL POWER STATION :</h2>
+    <div class="container1">
+      <img src="tpp.jpg" alt="thermal power station" style="width:518px;height:451px; padding: 25px;" />
+      <div>
+        <h4>* ​Neyveli Lignite Corporation India Limited (NLCIL) has significantly advanced its thermal power generation capabilities over the years. The company operates several thermal power stations, including Neyveli Thermal Power Station-I, Neyveli Thermal Power Station-II, and the Neyveli New Thermal Power Station. The Neyveli New Thermal Power Station, with a capacity of 1,000 MW, commenced operations in 2019 and 2021, replacing the older 600 MW Neyveli Thermal Power Station-I, which was decommissioned in 2020 after 52 years of service. </h4>
+        <br>
+        <h4>* In its pursuit of expanding thermal power capacity, NLCIL has embarked on projects like the Ghatampur Thermal Power Plant in Uttar Pradesh, which will add 1,980 MW (3x660 MW) upon completion. The first unit of this plant began commercial operations in December 2024. Additionally, the company is developing the Talabira Thermal Power Project in Odisha, aiming for a capacity of 3,200 MW (4x800 MW), with land acquisition and contract awards underway.</h4>
+        <br>
+        <h4>* Looking ahead, NLCIL has outlined plans to enhance its power generation capacity to 17,171 MW by 2030, comprising 11,140 MW from thermal sources and 6,031 MW from renewable energy. This strategic move includes significant investments in renewable energy, with ₹50,000 crore allocated for expansion in this sector, reflecting the company's commitment to sustainability. Notably, NLCIL does not foresee any new thermal capacity additions post-2030, aligning with global trends towards cleaner energy sources. </h4>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- MINE - I Including Expansion-->
+  <section class="books">
+    <h2 class="section-title" style="color: red;">MINE - I INCULDING EXPANSION :</h2>
+    <div class="container1">
+      <img src="lm.jfif" alt="MINE - I Including Expansion" style="width:518px;height:451px; padding: 25px;" />
+      <div>
+        <h3>The lignite seam was first exposed in August 1961 and regular mining of lignite commenced in May 1962. German excavation technology in open cast mining, using Bucket Wheel Excavators, Conveyors and Spreaders were used for the first time in the country in Neyveli Mine-I. The capacity of this mine was 6.5 MT which met the fuel requirement of TS-I. The capacity was increased to 10.5MT of lignite per annum from March 2003 under Mine-I expansion scheme and at present meets the fuel requirement for generating power from TPS-I and TPS-I Expansion.</h3>
+  
+      </div>
+    </div>
+  </section>
+
+ <!-- mines of neyveli  -->
+ <section class="books">
+  <h1 class="section-title" style="color: red;">MINES OF NEYVELI NLC</h1>
+  <img src="mines image.jpg" alt="NLC Image" >
+  <h2 style="color: blueviolet;">MINES -|</h2><br>
+  <h3> Mine-I is the first and one of the largest lignite mines operated by NLC India Limited (formerly Neyveli Lignite Corporation) in Neyveli, Tamil Nadu.</h3>
+   <br>
+   <h2 style="color: blueviolet;">MINES -|A</h2>
+   <br>
+   <h3>Mine-IA (also known as Mine-1A) is one of the open-cast lignite mines operated by NLC India Limited (NLCIL) in Neyveli, Tamil Nadu. It plays a crucial role in supplying fuel to the company's thermal power stations.</h3>
+   <br>
+   <h2 style="color: blueviolet;">MINES -||</h2><br>
+   <h3> Mine-II is one of the major open-cast lignite mines operated by NLC India Limited (NLCIL) in Neyveli, Tamil Nadu. It plays a pivotal role in supplying fuel to the company's thermal power stations.​</h3>
+   <br>
+   <h2 style="color: blueviolet;">MINES -|||</h2><br>
+   <h3> Mine-III is a proposed open-cast lignite mining project by NLC India Limited (NLCIL), located in the Neyveli Lignite Field in Cuddalore District, Tamil Nadu. This project aims to support the expansion of thermal power generation capacity in the region.​
+
+   </h3>
+</section>
+
+<!-- advantages of nlc  -->
+<section class="books">
+  <h1 class="section-title" style="color: red;"><b>ADVANTAGES OF NLC</h1>
+    <h2 class="section-title" style="color: blueviolet;">1. POWER GENERATION :</h2>
+  <div class="container1">
+    <img src="pga.jpeg" alt="thermal power station" style="width:518px;height:451px; padding: 25px;" />
+    <div>
+  <h3>() NLC is a major power producer in India.</h3>
+   <br>
+   <h3>() It operates several thermal and renewable power plants (coal/lignite/solar).</h3>
+   <br>
+   <h3>() Supplies electricity to Tamil Nadu and several other states in South India.</h3>
+   <br>
+   <h3>() Helps in reducing power shortages in rural and urban areas.</h3>
+   <br><br></div></div>
+   <h2 class="section-title" style="color: blueviolet;">2. ECONOMIC DEVELOPMENET :</h2>
+   <div class="container1">
+     <img src="eda.jpeg" alt="thermal power station" style="width:518px;height:451px; padding: 25px;" />
+     <div>
+   <h3>() One of the largest public sector enterprises in Tamil Nadu.</h3>
+   <br>
+   <h3>() Provides direct employment to thousands of people and indirect employment to many more.</h3>
+   <br>
+   <h3>() Boosts local economy by supporting local businesses, contractors, and service providers.</h3>
+   <br>
+   <h3>() Huge revenue generation for both state and central governments.</h3>
+   <br><br></div></div>
+   <h2 class="section-title" style="color: blueviolet;">3. INFRASTRUCTURE DEVELOPMENET :</h2>
+  <div class="container1">
+    <img src="ida.jpeg" alt="thermal power station" style="width:518px;height:451px; padding: 25px;" />
+    <div>
+   <h3>() Helped transform Neyveli from a village into a developed industrial township​</h3>
+   <br>
+   <h3>() Good roads, schools, hospitals, housing colonies, and other public services were developed.</h3>
+   <br>
+   <h3>() Contributed to urbanization and regional development in Cuddalore district.</h3>
+   <br><br></div></div>
+   <h2 class="section-title" style="color: blueviolet;">4. ETC....</h2>
+</section>
+
+<!-- disadvantages of nlc  -->
+<section class="books">
+  <h1 class="section-title" style="color: red;"><b>DISADVANTAGES OF NLC</h1>
+    <h2 class="section-title" style="color: blueviolet;">1.  ENVIRONMENTAL POLLUTION :</h2>
+  <div class="container1">
+    <img src="dap.jpeg" alt="thermal power station" style="width:518px;height:451px; padding: 25px;" />
+    <div>
+  <h3>() Air Pollution: Burning lignite emits significant amounts of carbon dioxide (CO₂), sulfur dioxide (SO₂), and particulate matter, contributing to air pollution and climate change.</h3>
+   <br>
+   <h3>() Water Pollution: Wastewater from mining and power plants can contaminate local water bodies, affecting aquatic life and drinking water sources.</h3>
+   <br>
+   <h3>() Thermal Pollution: Discharge of hot water from power plants into nearby water bodies can raise temperatures and disturb ecosystems.</h3>
+   <br><br></div></div>
+   <h2 class="section-title" style="color: blueviolet;">2. LAND DEGRADATION :</h2>
+   <div class="container1">
+     <img src="dld.jpeg" alt="thermal power station" style="width:518px;height:451px; padding: 25px;" />
+     <div>
+   <h3>() Loss of Agricultural Land: Fertile farmland is often permanently destroyed. This impacts local food production and livelihoods.</h3>
+   <br>
+   <h3>() Deforestation: Large areas of forest are cleared, reducing biodiversity and increasing vulnerability to soil erosion.</h3>
+   <br>
+   <h3>() Soil Erosion and Contamination: Removal of vegetation exposes soil to wind and rain, leading to erosion. Mining residues can also pollute the soil, making the land infertile.</h3>
+   <br><br></div></div>
+   <h2 class="section-title" style="color: blueviolet;">3. HEALTH HAZARDS :</h2>
+  <div class="container1">
+    <img src="dhh.jpeg" alt="thermal power station" style="width:518px;height:451px; padding: 25px;" />
+    <div>
+   <h3>() Dust and Particulate Matter: Lignite mining and handling generate fine dust that contains silica, ash, and other harmful particles.​</h3>
+   <br>
+   <h3>() Air Emissions: Power generation at NLC releases sulfur dioxide (SO₂), nitrogen oxides (NOₓ), and carbon monoxide (CO)—all of which are respiratory irritants.</h3>
+   <br>
+   <h3>() Water Contamination: Discharge of untreated effluents into water sources can lead to ingestion of heavy metals and toxic chemicals.</h3>
+   <br><br></div></div>
+   <h2 class="section-title" style="color: blueviolet;">4. ETC....</h2>
+   
+</section>
+
+  <!-- Slider Script -->
+  <script>
+    let index = 0;
+    const slides = document.getElementById("slideContainer");
+    const totalSlides = slides.children.length;
+
+    function changeSlide(direction) {
+      index += direction;
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>
