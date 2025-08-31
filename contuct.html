@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Admin</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f2027;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* Canvas Background */
+    #circuitCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+
+    /* Floating Card */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .about-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      animation: float 4s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .about-card img {
+      width: 120px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #00e0ff;
+      box-shadow: 0 0 20px #00e0ff;
+    }
+
+    .about-card h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #00e0ff;
+    }
+
+    .about-card p {
+      margin: 15px 0;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-card i {
+      margin-right: 10px;
+      color: #00e0ff;
+      font-size: 20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    /* Glowing effect */
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #00e0ff, 0 0 10px #00e0ff; }
+      50% { text-shadow: 0 0 20px #00e0ff, 0 0 30px #00e0ff; }
+      100% { text-shadow: 0 0 5px #00e0ff, 0 0 10px #00e0ff; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Futuristic Background (Canvas) -->
+  <canvas id="circuitCanvas"></canvas>
+
+  <!-- About Admin Card -->
+  <div class="about-card">
+    <!-- Your Logo -->
+    <img src="logo.png" alt="Admin Logo"> <!-- Replace with your logo path -->
+
+    <h2>About Admin</h2>
+    <p><i class="fas fa-user-shield"></i> Admin: RAJA V</p>
+    <p><i class="fas fa-envelope"></i> Gmail: rajavknm@gmail.com</p>
+    <p><i class="fas fa-phone"></i> Phone: +91 96776 47345</p>
+  </div>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4b5f6a1d7f.js" crossorigin="anonymous"></script>
+
+  <!-- Circuit Grid Animation -->
+  <script>
+    const canvas = document.getElementById("circuitCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function drawGrid() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = "rgba(0, 224, 255, 0.3)";
+      ctx.lineWidth = 1;
+
+      let gridSize = 50;
+      for (let x = 0; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+    }
+
+    let circuits = [];
+    function createCircuits() {
+      for (let i = 0; i < 40; i++) {
+        circuits.push({
+          x: Math.floor(Math.random() * canvas.width),
+          y: Math.floor(Math.random() * canvas.height),
+          size: 6,
+          dx: (Math.random() - 0.5) * 2,
+          dy: (Math.random() - 0.5) * 2
+        });
+      }
+    }
+
+    function drawCircuits() {
+      ctx.fillStyle = "#00e0ff";
+      circuits.forEach(c => {
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        c.x += c.dx;
+        c.y += c.dy;
+
+        if (c.x < 0 || c.x > canvas.width) c.dx *= -1;
+        if (c.y < 0 || c.y > canvas.height) c.dy *= -1;
+      });
+    }
+
+    function animate() {
+      drawGrid();
+      drawCircuits();
+      requestAnimationFrame(animate);
+    }
+
+    createCircuits();
+    animate();
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      drawGrid();
+    });
+  </script>
+
+</body>
+</html>
