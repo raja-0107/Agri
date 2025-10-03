@@ -373,8 +373,15 @@
       slides.style.transform = `translateX(-${index * 100}%)`;
     }
   </script>
-
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "a8e034d9-17f8-43f7-9067-cc51354b6619",
+        apiHost: "https://cloud.flowiseai.com",
+    })
+</script>
 </body>
 </html>
+
 
 
